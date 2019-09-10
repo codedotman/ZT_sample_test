@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.view.MenuItem
-import test.ztech.views.ProfilePageFragment
+import test.ztech.views.userprofile.ProfilePageFragment
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     override fun onNavigationItemSelected(p0: MenuItem): Boolean {
