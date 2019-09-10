@@ -8,6 +8,6 @@ import test.ztech.data.models.UserProfileResponse
  * Created by USER on 10/09/2019.
  */
 interface Api {
-    @GET("/users/-LmKkNDAh60zMZt1GrI4")
+    @GET("users/-LmKkNDAh60zMZt1GrI4")
     fun getUserDetails(): Observable<UserProfileResponse>
 }

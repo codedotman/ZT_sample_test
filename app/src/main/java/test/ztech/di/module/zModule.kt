@@ -4,6 +4,7 @@ import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -15,6 +16,7 @@ import javax.inject.Singleton
 /**
  * Created by USER on 10/09/2019.
  */
+@Module
 class zModule {
 
     @Provides
@@ -53,7 +55,7 @@ class zModule {
                           gsonConverterFactory: GsonConverterFactory): Retrofit {
         return Retrofit.Builder()
                 .client(okHttpClient)
-                .baseUrl("http://35.226.14.35:8080/api/v1")
+                .baseUrl("http://35.226.14.35:8080/api/v1/")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(gsonConverterFactory)
                 .build()

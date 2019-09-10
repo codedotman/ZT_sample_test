@@ -14,7 +14,7 @@ import javax.inject.Singleton
  */
 @Singleton
 @Component(modules = arrayOf(AndroidSupportInjectionModule::class, zMainModule::class, zModule::class, ActivityBuilder::class))
-interface zComponent  : AndroidInjector<zApplication> {
+interface ZComponent : AndroidInjector<zApplication> {
     @Component.Builder
     abstract class Builder : AndroidInjector.Builder<zApplication>()
 }

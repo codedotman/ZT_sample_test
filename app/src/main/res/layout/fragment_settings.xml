@@ -34,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
         android:layout_marginStart="16dp"
+        android:textColor="@color/black"
         android:text="Change your password"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintStart_toEndOf="@+id/imageView3" />
@@ -55,6 +56,7 @@
         android:layout_marginBottom="13dp"
         android:layout_marginStart="16dp"
         android:text="Upgrade to Premium"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintStart_toEndOf="@+id/imageView4" />
 
@@ -96,6 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
         android:layout_marginStart="16dp"
+        android:textColor="@color/black"
         android:text="Terms of Use"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintStart_toEndOf="@+id/imageView5" />
@@ -116,6 +119,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="14dp"
         android:layout_marginStart="16dp"
+        android:textColor="@color/black"
         android:text="Licenses"
         app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintStart_toEndOf="@+id/imageView6" />
@@ -125,6 +129,7 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginBottom="45dp"
+        android:textColor="@color/black"
         android:layout_marginTop="45dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
@@ -148,6 +153,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Logout"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintStart_toEndOf="@+id/imageView7" />
 </android.support.constraint.ConstraintLayout>
