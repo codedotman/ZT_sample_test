@@ -38,4 +38,29 @@ object ImageUtils {
         }
 
     }
+
+    fun loadRoundImage(imageURL: String, view: ImageView) {
+
+        if (imageURL.endsWith(".svg")) {
+            GlideApp.with(view.context)
+                    .`as`<PictureDrawable>(PictureDrawable::class.java)
+                    .error(R.mipmap.ic_launcher_round)
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .listener(SvgSoftwareLayerSetter())
+                    .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.RESOURCE))
+                    .load(Uri.parse(imageURL))
+                    // .override(64, 64)
+                    .into(view)
+        } else {
+
+            GlideApp.with(view.context)
+                    .load(imageURL)
+                    .apply(RequestOptions().circleCrop())
+                    .error(R.mipmap.ic_launcher_round)
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .into(view)
+
+        }
+
+    }
 }

@@ -2,7 +2,7 @@ package test.ztech.di.builders
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
-import test.ztech.MainActivity
+import test.ztech.views.MainActivity
 import test.ztech.views.userprofile.ProfilePageFragmentProvider
 
 /**

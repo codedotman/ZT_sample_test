@@ -1,13 +1,14 @@
-package test.ztech
+package test.ztech.views
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
+import android.view.Menu
 import android.view.MenuItem
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import test.ztech.views.SettingsFragment
+import test.ztech.R
+import test.ztech.views.settings.SettingsFragment
 import test.ztech.views.userprofile.ProfilePageFragment
 
 class MainActivity : DaggerAppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
@@ -16,10 +17,8 @@ class MainActivity : DaggerAppCompatActivity(), BottomNavigationView.OnNavigatio
 
         when (p0.itemId) {
             R.id.navigation_profile -> {
+                toolbar_title.text = username
                 fragment = ProfilePageFragment()
-            }
-            R.id.navigation_home -> {
-                fragment = SettingsFragment()
             }
         }
         return loadFragment(fragment)
@@ -28,7 +27,11 @@ class MainActivity : DaggerAppCompatActivity(), BottomNavigationView.OnNavigatio
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(toolbar)
+        toolbar.title=""
+        toolbar_title.text = username
         loadFragment(ProfilePageFragment())
+
 
         navigation.setOnNavigationItemSelectedListener(this)
     }
@@ -42,5 +45,35 @@ class MainActivity : DaggerAppCompatActivity(), BottomNavigationView.OnNavigatio
             return true
         }
         return false
+    }
+
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.main2, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        val id = item.itemId
+
+
+        return if (id == R.id.action_settings) {
+            toolbar_title.text = settings
+            supportActionBar!!.setDisplayShowHomeEnabled(true)
+            loadFragment(SettingsFragment())
+
+            true
+        } else super.onOptionsItemSelected(item)
+
+    }
+
+
+    companion object {
+        private val username = "@olamidejegede"
+        private val settings = "Settings"
     }
 }

@@ -30,7 +30,6 @@ constructor(private val repository: Repository
                         { result ->
                             data.setValue(result)
                             }, { error ->
-                    //data.setValue(CompetitionResponse(errorMessage = error.message.toString()))
                 }))
         return data
     }

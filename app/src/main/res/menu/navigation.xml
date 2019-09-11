@@ -4,27 +4,27 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@android:drawable/ic_menu_gallery"
+        android:icon="@drawable/ic_home"
         tools:ignore="MenuTitle" />
 
     <item
         android:id="@+id/navigation_search"
-        android:icon="@android:drawable/ic_menu_gallery"
+        android:icon="@drawable/ic_search"
         tools:ignore="MenuTitle" />
 
     <item
         android:id="@+id/navigation_yea"
-        android:icon="@android:drawable/ic_menu_gallery"
+        android:icon="@drawable/ic_circle"
         tools:ignore="MenuTitle" />
 
     <item
         android:id="@+id/navigation_notification"
-        android:icon="@android:drawable/ic_menu_gallery"
+        android:icon="@drawable/ic_notification"
         tools:ignore="MenuTitle" />
 
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@android:drawable/ic_menu_gallery"
+        android:icon="@drawable/ic_profile"
         tools:ignore="MenuTitle" />
 
 </menu>

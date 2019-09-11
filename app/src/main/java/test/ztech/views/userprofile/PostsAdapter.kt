@@ -29,7 +29,6 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostsViewHolder>() {
     override fun onBindViewHolder(p0: PostsViewHolder, p1: Int) {
         val result = resultList[p1]
         ImageUtils.loadImage(result.mediaUrl!!, p0.Tposition)
-        //p0.textView.text = result.name
 
     }
 

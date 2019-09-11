@@ -9,9 +9,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.lang.Exception
 
-/**
- * Created by USER on 11/08/2019.
- */
+
 class SvgEncoder : ResourceEncoder<SVG> {
     override fun getEncodeStrategy(options: Options): EncodeStrategy {
         return EncodeStrategy.SOURCE

@@ -4,9 +4,7 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="test.ztech.views.SettingsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context="test.ztech.views.settings.SettingsFragment">
 
     <TextView
         android:id="@+id/textView5"
@@ -15,6 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Account"
+        android:fontFamily="@font/montserrat_semibold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
-        android:src="@android:drawable/btn_star_big_on"
+        android:src="@drawable/ic_shield"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -34,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
         android:layout_marginStart="16dp"
+        android:fontFamily="@font/montserrat_semibold"
         android:textColor="@color/black"
         android:text="Change your password"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
-        android:src="@android:drawable/btn_star_big_on"
+        android:src="@drawable/ic_add_user"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -56,6 +56,7 @@
         android:layout_marginBottom="13dp"
         android:layout_marginStart="16dp"
         android:text="Upgrade to Premium"
+        android:fontFamily="@font/montserrat_semibold"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintStart_toEndOf="@+id/imageView4" />
@@ -64,9 +65,11 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:layout_marginBottom="38dp"
         android:layout_marginTop="44dp"
-        android:background="@android:color/darker_gray"
+        android:background="@color/gray"
         app:layout_constraintBottom_toBottomOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintStart_toEndOf="@+id/textView7"
@@ -79,6 +82,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:text="About"
+        android:fontFamily="@font/montserrat_semibold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
@@ -88,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:src="@android:drawable/btn_star_big_on"
+        android:src="@drawable/ic_document"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -99,6 +103,7 @@
         android:layout_marginBottom="1dp"
         android:layout_marginStart="16dp"
         android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_semibold"
         android:text="Terms of Use"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintStart_toEndOf="@+id/imageView5" />
@@ -109,7 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="14dp"
-        android:src="@android:drawable/btn_star_big_on"
+        android:src="@drawable/ic_document"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -120,6 +125,7 @@
         android:layout_marginBottom="14dp"
         android:layout_marginStart="16dp"
         android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_semibold"
         android:text="Licenses"
         app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintStart_toEndOf="@+id/imageView6" />
@@ -131,7 +137,9 @@
         android:layout_marginBottom="45dp"
         android:textColor="@color/black"
         android:layout_marginTop="45dp"
-        android:background="@android:color/darker_gray"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/gray"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -143,7 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="27dp"
-        android:src="@android:drawable/btn_star_big_on"
+        android:src="@drawable/ic_log_out"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
@@ -153,6 +161,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Logout"
+        android:fontFamily="@font/montserrat_semibold"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintStart_toEndOf="@+id/imageView7" />

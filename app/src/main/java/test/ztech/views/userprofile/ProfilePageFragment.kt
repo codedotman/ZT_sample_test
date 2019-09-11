@@ -60,14 +60,17 @@ class ProfilePageFragment : DaggerFragment() {
     private fun populateUsers() {
 
         mProfileViewModel.getUserDetails().observe(this, Observer{ listResource ->
-                //mAdapter.setItems(listResource)
             if (listResource != null) {
-                //toolbar.title = listResource.details?.username
+                textView13.visibility = View.VISIBLE
+                textView14.visibility = View.VISIBLE
+                textView15.visibility = View.VISIBLE
+                textView17.visibility = View.VISIBLE
+                button2.visibility = View.VISIBLE
                 textView2.text = listResource.details?.followerCount
                 textView4.text = listResource.details?.followingCount
                 textView8.text = listResource.details?.postLikeCount
                 textView16.text = listResource.details?.fullname
-                ImageUtils.loadImage(listResource.details!!.avatar, imageView)
+                ImageUtils.loadRoundImage(listResource.details!!.avatar, imageView)
                 mAdapter.setItems(listResource)
 
 
