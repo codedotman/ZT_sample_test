@@ -28,12 +28,12 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostsViewHolder>() {
 
     override fun onBindViewHolder(p0: PostsViewHolder, p1: Int) {
         val result = resultList[p1]
-        ImageUtils.loadImage(result.mediaUrl!!, p0.Tposition)
+        ImageUtils.loadImage(result.mediaUrl!!, p0.tPosition)
 
     }
 
     inner class PostsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val Tposition = itemView.pixxxs
+        val tPosition = itemView.pixxxs
     }
 
 

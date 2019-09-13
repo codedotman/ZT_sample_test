@@ -31,9 +31,6 @@ class ProfilePageFragment : DaggerFragment() {
     private lateinit var mProfileViewModel: ProfilePageViewModel
     private lateinit var mAdapter: PostsAdapter
 
-
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -66,6 +63,7 @@ class ProfilePageFragment : DaggerFragment() {
                 textView15.visibility = View.VISIBLE
                 textView17.visibility = View.VISIBLE
                 button2.visibility = View.VISIBLE
+                activity!!.toolbar_title.text = listResource.details?.username
                 textView2.text = listResource.details?.followerCount
                 textView4.text = listResource.details?.followingCount
                 textView8.text = listResource.details?.postLikeCount
@@ -74,7 +72,6 @@ class ProfilePageFragment : DaggerFragment() {
                 mAdapter.setItems(listResource)
 
 
-                //      updateScreen(listResource.details?.fullname, listResource.details?.username, listResource.details.followingCount)
             }
 
 

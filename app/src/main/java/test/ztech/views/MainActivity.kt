@@ -17,21 +17,22 @@ class MainActivity : DaggerAppCompatActivity(), BottomNavigationView.OnNavigatio
 
         when (p0.itemId) {
             R.id.navigation_profile -> {
-                toolbar_title.text = username
                 fragment = ProfilePageFragment()
             }
         }
+
+
         return loadFragment(fragment)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
-        toolbar.title=""
-        toolbar_title.text = username
-        loadFragment(ProfilePageFragment())
 
+        setSupportActionBar(toolbar)
+        val actionBar = supportActionBar
+        actionBar!!.title = ""
+        loadFragment(ProfilePageFragment())
 
         navigation.setOnNavigationItemSelectedListener(this)
     }
@@ -41,6 +42,7 @@ class MainActivity : DaggerAppCompatActivity(), BottomNavigationView.OnNavigatio
             supportFragmentManager
                     .beginTransaction()
                     .replace(R.id.home_container, fragment)
+                    .addToBackStack(null)
                     .commit()
             return true
         }
@@ -73,7 +75,6 @@ class MainActivity : DaggerAppCompatActivity(), BottomNavigationView.OnNavigatio
 
 
     companion object {
-        private val username = "@olamidejegede"
         private val settings = "Settings"
     }
 }
